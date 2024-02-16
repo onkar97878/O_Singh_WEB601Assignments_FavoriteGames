@@ -1,0 +1,112 @@
+/* Base styles for headings */
+h2 {
+  color: rgb(136, 117, 112);
+  font-size: 2.3em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
+}    
+
+p {
+  margin-bottom: 8px;
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Tag styling with gradient border */
+.tag {
+  border: 1px solid transparent;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), radial-gradient(circle at top left, #007CF0, #00DFD8);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-weight: bold; /* Make it bold */
+}
+
+/* Titles with gradient text */
+.title1, .title2, .title3 {
+  font-size: 2em;
+  text-decoration: underline;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: hue-shift 5s infinite linear; /* Add color animation */
+}
+
+.title1 {
+  background-image: linear-gradient(45deg, rgb(23, 61, 40), rgb(246, 96, 54));
+}
+
+.title2 {
+  background-image: linear-gradient(45deg, brown, rgb(255, 165, 0));
+}
+
+.title3 {
+  background-image: linear-gradient(45deg, rgb(90, 112, 159), rgb(123, 67, 151));
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto; /* Adjust height automatically */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+  margin-bottom: 8px;
+  transition: transform 0.3s ease-out; /* Smooth transition */
+  
+  &:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+  }
+}
+
+/* Card containers with subtle shadow */
+.card-container1, .card-container2, .card-container3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add shadow to containers */
+  transition: all 0.3s ease;
+}
+
+.card-container1 {
+  background-color: rgb(192, 220, 219);
+}
+
+.card-container2 {
+  background-color: rgb(241, 199, 182);
+}
+
+.card-container3 {
+  background-color: rgb(192, 234, 187);
+}
+
+/* Unified card styling with hover effect */
+.card1, .card2, .card3 {
+  border: 1px solid #0d0c0c;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow and transform */
+
+  &:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+}
+
+/* Keyframes for title color animation */
+@keyframes hue-shift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
