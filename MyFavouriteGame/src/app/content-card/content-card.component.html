@@ -1,0 +1,18 @@
+<div class="card-container">
+
+    @for (item of contentList.content; track item.id) {
+       <div>
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.description }}</p>
+          <p>Creator: {{ item.creator }}</p>
+          @if(item.imgURL){
+             <img [src]="item.imgURL" alt="{{ item.title }} Image" />
+          }
+          <p>Type: {{ item.type }}</p>
+          <p>Tags: {{ item.tags?.join(', ') }}</p>
+        </div>
+     }
+     
+  
+  </div>
+  
