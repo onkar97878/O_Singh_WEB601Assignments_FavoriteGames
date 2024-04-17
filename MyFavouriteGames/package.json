@@ -1,9 +1,9 @@
 {
   "name": "my-favourite-games",
-  "version": "0.0.3",
+  "version": "0.0.10",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "http-server -p 8080 -c-1 dist/VeerpalKaurGame",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^17.1.0",
     "@angular/platform-browser-dynamic": "^17.1.0",
     "@angular/router": "^17.1.0",
+    "@angular/service-worker": "^17.1.0",
+    "angular-in-memory-web-api": "^0.17.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

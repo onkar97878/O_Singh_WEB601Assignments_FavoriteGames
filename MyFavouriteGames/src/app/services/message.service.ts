@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class MessageService {
+  sendMessage(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
   getContentById(idOfTopContent: number) {
     throw new Error('Method not implemented.');
   }
