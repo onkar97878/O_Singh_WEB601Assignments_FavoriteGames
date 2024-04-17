@@ -1,10 +1,19 @@
-<div>
-    <p class="title1">{{ item.title }}</p>
-<p>{{ item.description }}</p>
-<p>Creator: {{ item.creator }}</p>
-<p HoverAffect [hoverStyle]="{ 'fontWeight': 'bold' }">Tags :{{ item.tags }}</p>
-<img *ngIf="item.imgURL; else defaultImage" [src]="item.imgURL" alt="{{ item.title }} Image" />
-    <ng-template #defaultImage>
-      <img [src]="defaultImageUrl" alt="Default Image" />
-    </ng-template>
-</div>
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ item.title }}</mat-card-title>
+    <mat-card-subtitle>Creator: {{ item.creator }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-slider min="1" max="100" step="1" thumbLabel></mat-slider>
+  <mat-card-content>
+    <p>{{ item.description }}</p>
+    <p HoverAffect [hoverStyle]="{ 'fontWeight': 'bold' }">Tags: {{ item.tags }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- Add actions buttons if needed -->
+  </mat-card-actions>
+  <img *ngIf="item.imgURL; else defaultImage" [src]="item.imgURL" alt="{{ item.title }} Image" />
+  <ng-template #defaultImage>
+    <img [src]="defaultImageUrl" alt="Default Image" />
+  </ng-template>
+</mat-card>

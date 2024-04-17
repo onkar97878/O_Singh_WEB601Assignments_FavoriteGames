@@ -1,4 +1,6 @@
-export const contentDB=[
+import { Content } from "./content-interface"
+
+export const contentArray: Content[] = [
         { 
           id: 1, 
           title: 'Badminton',
@@ -14,7 +16,7 @@ export const contentDB=[
            description: 'Association football or soccer', 
            creator: 'James Haldane ', 
            imgURL: '',
-            type: '',
+            type: 'Indoor',
           tags: ['Tag3', 'Tag6'] 
         },
         { 
