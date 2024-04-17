@@ -1,0 +1,54 @@
+@import '~@angular/material/theming';
+
+// Define your color palette here
+$my-palette: (
+  50 : #e5f5e0,
+  100 : #c1e5bb,
+  200 : #9cd492,
+  300 : #78c56c,
+  400 : #5bb853,
+  500 : #3fae3a,
+  600 : #38a534,
+  700 : #2f972c,
+  800 : #268924,
+  900 : #146d0f,
+  A100 : #ffffff,
+  A200 : #d4f4d4,
+  A400 : #a1e4a0,
+  A700 : #87db86,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+// Define your custom theme using the palette
+$my-theme: mat-light-theme((
+  color: (
+    primary: map-get($my-palette, 500),
+    accent: map-get($my-palette, A200),
+  ),
+));
+
+// Include all the component styles for your custom theme
+@include mat-core();
+@include mat-button-theme($my-theme);
+@include mat-form-field-theme($my-theme);
+@include mat-input-theme($my-theme);
+@include mat-select-theme($my-theme);
+@include mat-checkbox-theme($my-theme);
+@include mat-radio-theme($my-theme);
+@include mat-slider-theme($my-theme);
+@include mat-slide-toggle-theme($my-theme);

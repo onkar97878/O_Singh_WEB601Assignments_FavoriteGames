@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { MessageService } from './services/message.service';
 import { GameServiceService } from './services/game.service';
-import { Content } from './helper-files/content-interface';
-
 
 
 @Component({
@@ -12,14 +8,24 @@ import { Content } from './helper-files/content-interface';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  topContentItem: Content; 
+  title = 'Veerpal'
+  singleContentItem: any; 
+  gameService: any;
 
   constructor(private service: GameServiceService) { }
 
   ngOnInit(): void {
   
-    this.service.getContentById(6).subscribe((res: any) => {
-      this.topContentItem = res;
+    this.loadSingleContentItem();
+  }
+
+  loadSingleContentItem() {
+    const idOfContentItemToLoad = 1; 
+    this.gameService.getContentItemById(idOfContentItemToLoad).subscribe((data: any) => {
+      this.singleContentItem = data;
+      console.log(`Content Item at id: ${idOfContentItemToLoad}`);
     });
   }
+
+  
 }
